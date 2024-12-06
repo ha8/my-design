@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Products</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar Section (reuse the one from the main page) -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#"
+        ><img src="images/shopping-bag.png" style="width: 70px"
+      /></a>
+      <form class="form-inline my-2 my-lg-0 ml-3">
+        <div class="input-group">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search products"
+            aria-label="Search"
+            style="width: 300px"
+          />
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="view-products.html">View Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- View Products Content -->
+    <div class="container">
+      <h2 class="regularText">Our Products</h2>
+      <div class="card-columns">
+        <!-- Product Cards will be dynamically generated here -->
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const products = [
+          {
+            id: 1,
+            name: "Dress",
+            description: "Description of the product.",
+            image: "images/dress1.png",
+          },
+          {
+            id: 2,
+            name: "Product 2",
+            description: "Description of the product.",
+            image: "images/dress2.png",
+          },
+          {
+            id: 3,
+            name: "Product 3",
+            description: "Description of the product.",
+            image: "images/dress2.png",
+          },
+          {
+            id: 4,
+            name: "Product 4",
+            description: "Description of the product.",
+            image: "images/dress2.png",
+          },
+          {
+            id: 5,
+            name: "Product 5",
+            description: "Description of the product.",
+            image: "images/dress2.png",
+          },
+          {
+            id: 6,
+            name: "Product 6",
+            description: "Description of the product.",
+            image: "images/dress2.png",
+          },
+          // Add more products as needed
+        ];
+
+        const cardColumns = document.querySelector(".card-columns");
+
+        // Generate cards dynamically using map
+        products.map((product) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          card.innerHTML = `
+            <img src="${product.image}" class="card-img-top" alt="${product.name}" />
+            <div class="card-body">
+              <h5 class="card-title">${product.name}</h5>
+              <p class="card-text">${product.description}</p>
+              <button class="card-btn">Add to Cart</button>
+            </div>
+          `;
+
+          cardColumns.appendChild(card);
+        });
+      });
+    </script>
+  </body>
+</html>

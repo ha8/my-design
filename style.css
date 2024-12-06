@@ -1,0 +1,304 @@
+.carousel-item {
+  height: 100vh; /* Makes the carousel take the full height of the viewport */
+  background-size: cover; /* Ensures the image covers the whole area */
+  background-position: center; /* Centers the image */
+}
+
+/* Center text inside carousel */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+/* Custom button style */
+.carousel-btn {
+  background-color: #ee075e;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 50px;
+}
+
+/* Customize carousel caption text */
+.carousel-caption h4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+html,
+body {
+  background-color: black;
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-item.active .nav-link {
+  color: #ee075e !important;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: #ee075e;
+}
+
+.card-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+.regularText {
+  color: white;
+}
+
+/* Styling for individual cards */
+.card {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-btn {
+  background-color: #ee075e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: #f1a7c1;
+}
+
+.button-wrapper {
+  position: relative;
+  height: 55px;
+}
+
+.back-container {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 0;
+  margin-top: 4px;
+  margin-left: -2px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.button-container {
+  position: relative;
+  border-radius: 10px;
+  border-color: #ee075e;
+  border-width: 2px;
+  border-style: solid;
+  width: 100%;
+  background-color: #ee075e;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  height: 45px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.button-content {
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+}
+
+.background-white {
+  background-color: white;
+}
+
+.popular {
+  border-bottom: 1px solid #ee075e;
+  padding-bottom: 20px;
+}
+
+.latest-news .card:hover,
+.popular-products .card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.services {
+  background-color: #f0f8ff;
+  padding: 40px 0;
+}
+
+.services .service-item {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.services .service-item:last-child {
+  border-right: none; /* Remove border for the last item */
+}
+
+.services .service-icon {
+  font-size: 40px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.services .service-text {
+  font-size: 18px;
+  color: #333;
+}
+
+.services .service-subtext {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Animation for falling items */
+@keyframes fall {
+  0% {
+    top: -100px;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+#falling-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.falling-item {
+  position: absolute;
+  top: -150px;
+  opacity: 1;
+  animation: fall 5s ease-in forwards;
+}
+
+.falling-item img {
+  width: 120px;
+  height: auto;
+}
+
+.falling-item.heel {
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.falling-item.bag {
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.falling-item.hanger {
+  left: 70%;
+  animation-delay: 3s;
+}
+
+/* Navbar adjustments */
+nav {
+  position: relative;
+  z-index: 10; /* Navbar on top */
+}
+
+/* Flexbox layout for carousel */
+.d-flex {
+  display: flex;
+  flex-direction: row; /* Default layout: row */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Optional: Center content horizontally */
+  gap: 1rem; /* Optional: Add space between items */
+}
+
+.carousel-text {
+  text-align: center; /* Center text inside the div */
+}
+/* Change color of the hamburger icon lines to white */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2230%22 height=%2220%22 viewBox=%220 0 30 20%22%3E%3Cpath fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 d=%22M0 0h30M0 10h30M0 20h30%22/%3E%3C/svg%3E");
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column; /* Change to column layout */
+    gap: 0.5rem; /* Adjust spacing for smaller screens */
+  }
+
+  .carousel-text h4 {
+    font-size: 1.5rem; /* Reduce heading size for smaller screens */
+  }
+
+  .carousel-btn {
+    width: 100%; /* Make button full width */
+    padding: 0.75rem; /* Adjust button padding */
+  }
+
+  .carousel-caption h4 {
+    font-size: 1.5rem; /* Smaller heading size */
+  }
+
+  .card-columns {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .carousel-image img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
