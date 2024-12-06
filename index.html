@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online store</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Link to Slick Carousel CSS (if you want to use it) -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Link to the custom CSS file -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="stars"></div>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">
+        <img src="images/shopping-bag.png" style="width: 70px" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="view-products.html">View Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-caption">
+            <div class="carousel-content">
+              <!-- Text and Button on the Left -->
+
+              <!-- Image on the Right -->
+              <div class="d-flex">
+                <div class="carousel-image">
+                  <img src="images/woman.png" alt="Store Image" />
+                </div>
+                <div class="carousel-text">
+                  <h4>Welcome to Our Online Store</h4>
+                  <a href="view-products.html">
+                    <button class="carousel-btn">Shop Now</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <h4>Discover New Collections</h4>
+            <button class="carousel-btn">Explore Now</button>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <h4>Fashion That Fits Your Style</h4>
+            <button class="carousel-btn">Shop Your Style</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <a
+        class="carousel-control-prev"
+        href="#carouselExample"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExample"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- Popular Products Section -->
+    <section class="popular-products py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 regularText popular">Popular Products</h2>
+        <div class="row">
+          <!-- Product 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300"
+                class="card-img-top"
+                alt="Product 1"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Product 1</h5>
+                <p class="card-text">$29.99</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300"
+                class="card-img-top"
+                alt="Product 2"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Product 2</h5>
+                <p class="card-text">$39.99</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300"
+                class="card-img-top"
+                alt="Product 3"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Product 3</h5>
+                <p class="card-text">$49.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="latest-news py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Latest News</h2>
+        <div class="row">
+          <!-- News Item 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300"
+                class="card-img-top"
+                alt="News 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">News Title 1</h5>
+                <p class="card-text">
+                  Brief description of the latest news article goes here. Read
+                  more to stay updated!
+                </p>
+                <a href="#" class="btn card-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Item 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300"
+                class="card-img-top"
+                alt="News 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">News Title 2</h5>
+                <p class="card-text">
+                  Summary of another recent news update. Click here to explore
+                  the details.
+                </p>
+                <a href="#" class="btn card-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Item 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/300"
+                class="card-img-top"
+                alt="News 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">News Title 3</h5>
+                <p class="card-text">
+                  Brief intro to the third news story. Stay informed by reading
+                  further.
+                </p>
+                <a href="#" class="btn card-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="d-flex">
+          <!-- Service Item 1: Free Delivery -->
+          <div class="service-item">
+            <i class="service-icon fas fa-truck"></i>
+            <div class="service-text">FREE DELIVERY</div>
+            <div class="service-subtext">Worldwide</div>
+          </div>
+
+          <!-- Service Item 2: 24/7 Support -->
+          <div class="service-item">
+            <i class="service-icon fas fa-headset"></i>
+            <div class="service-text">24/7 SUPPORT</div>
+            <div class="service-subtext">Customer Support</div>
+          </div>
+
+          <!-- Service Item 3: Payment Security -->
+          <div class="service-item">
+            <i class="service-icon fas fa-lock"></i>
+            <div class="service-text">PAYMENT</div>
+            <div class="service-subtext">Secure System</div>
+          </div>
+
+          <!-- Service Item 4: Trusted Products -->
+          <div class="service-item">
+            <i class="service-icon fas fa-shield-alt"></i>
+            <div class="service-text">TRUSTED</div>
+            <div class="service-subtext">Genuine Products</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>About Us</h5>
+            <p>
+              We are committed to providing the best products for our customers.
+              Browse our latest collections and find your style.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-light">Home</a></li>
+              <li><a href="about.html" class="text-light">About</a></li>
+              <li>
+                <a href="view-products.html" class="text-light">Products</a>
+              </li>
+              <li><a href="contact.html" class="text-light">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p>Email: support@brandname.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Address: 1234 Street, City, Country</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          &copy; 2024 BrandName. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <div id="falling-items"></div>
+    <!-- Bootstrap and jQuery JS files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Slick Carousel JS (if you want to use it) -->
+    <script src="script.js"></script>
+  </body>
+</html>
